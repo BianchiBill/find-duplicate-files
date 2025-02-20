@@ -1,6 +1,6 @@
 
 
-import { findDuplicates } from './find-duplicates.ts';
+import { findDuplicates } from './scanner/find-duplicates.ts';
 
 // Use this file to test your functions.
 // Exemplo de uso / Example of use:
@@ -12,7 +12,7 @@ import { findDuplicates } from './find-duplicates.ts';
 
 (async () => {
   try {
-    const teste = await findDuplicates('C:\\Projects\\find-duplicate-files');
+    const teste = await findDuplicates();
 
     console.log('🚀 ==  run.ts ==  teste:', teste);
 

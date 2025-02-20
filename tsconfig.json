@@ -25,6 +25,6 @@
     "./src/**/*"
   ],
   "exclude": [
-    "./run.ts"
+    "./src/run.ts",
   ]
 }

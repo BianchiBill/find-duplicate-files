@@ -1,0 +1,10 @@
+{
+  "directory": "./",
+  "ignoreNodeModules": true,
+  "includeTypescript": false,
+  "includeJavascript": true,
+  "ignoreFolders": [
+    "**/dist/**",
+    "**/.git/**"
+  ]
+}
