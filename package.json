@@ -29,7 +29,8 @@
   },
   "scripts": {
     "dev": "tsx src/run.ts",
-    "build": "tsc"
+    "build": "pkgroll",
+    "cli": "node dist/index.js"
   },
   "repository": {
     "type": "git",
