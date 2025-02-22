@@ -7,7 +7,14 @@
   "private": false,
   "homepage": "https://github.com/BianchiBill/find-duplicate-files#readme",
   "keywords": [
-    "node"
+    "node",
+    "duplicate",
+    "files",
+    "duplicate files",
+    "duplicate-files",
+    "find",
+    "find duplicate",
+    "find duplicate files"
   ],
   "exports": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -46,8 +53,12 @@
     "eslint-config-airbnb-typescript": "18.0.0",
     "eslint-config-prettier": "10.0.1",
     "eslint-plugin-prettier": "5.2.3",
+    "pkgroll": "2.10.0",
     "tsx": "4.19.3",
     "typescript": "5.7.3"
+  },
+  "engines": {
+    "npm": ">= 4.0.0"
   },
   "license": "MIT"
 }
