@@ -100,3 +100,44 @@ Se a opção `--delete` for usada:
 
 MIT © [Rafael Bianchi](https://github.com/BianchiBill)
 
+
+---
+
+## 🤝 Contribuindo
+
+Contribuições para melhorar o **Scanner Duplicate Files** são bem-vindas!  
+Se deseja colaborar, siga estes passos:
+
+1. **Faça um fork** deste repositório.
+2. **Clone** o seu fork:  
+   ```sh
+   git clone https://github.com/BianchiBill/find-duplicate-files.git
+   ```
+3. **Crie um novo branch** para a sua melhoria ou correção:  
+   ```sh
+   git checkout -b feature/new-feature
+   ```
+4. **Faça suas alterações** e commit:  
+   ```sh
+   git commit -m "feature: add new feature"
+   ```
+5. **Envie suas alterações** para o fork:  
+   ```sh
+   git push origin feature/new-feature
+   ```
+6. **Abra um pull request** no repositório dev.
+
+### 🛠 Configuração para Desenvolvimento
+Para configurar o projeto localmente, instale as dependências:
+```sh
+npm install
+```
+ou
+```sh
+yarn install
+```
+
+### 📢 Sugestões & Problemas
+Se encontrar um bug ou tiver uma ideia de melhoria, por favor, abra uma [issue](https://github.com/BianchiBill/find-duplicate-files/issues).
+
+Obrigado por contribuir! 🚀
