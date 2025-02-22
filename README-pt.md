@@ -81,6 +81,8 @@ Você pode desejar mudar as opções default, para isso crie um arquivo `sdfconf
 3. Compara os hashes para detectar duplicatas.
 4. Exibe os arquivos duplicados e, opcionalmente, os remove.
 
+! Não é verificado se os arquivos possuem nomes iguais, e sim se possuem o mesmo código/texto.
+
 ## 💻 Exemplo de Saída
 
 ```
