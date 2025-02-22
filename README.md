@@ -81,6 +81,8 @@ You may want to change the default options. To do this, create an `sdfconfig.jso
 3. Compares hashes to detect duplicates.
 4. Displays duplicate files and optionally removes them.
 
+! It is not checked if the files have the same names, but if they have the same code/text.
+
 ## 💻 Example Output
 
 ```
