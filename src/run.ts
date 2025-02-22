@@ -1,10 +1,10 @@
 
 
-import { findDuplicates } from './scanner/find-duplicates.ts';
+import { findDuplicates } from './scanner/find-duplicates';
 
 // Use this file to test your functions.
 // Exemplo de uso / Example of use:
-// ./src/sum.ts
+// ./src/sum
 // export const sum = (num1: number, num2: number): number => num1 + num2;
 
 // Import functions / Importe funções
@@ -14,7 +14,7 @@ import { findDuplicates } from './scanner/find-duplicates.ts';
   try {
     const teste = await findDuplicates();
 
-    console.log('🚀 ==  run.ts ==  teste:', teste);
+    console.log('🚀 ==  run ==  teste:', teste);
 
   } catch (error) {
     // O TypeScript sabe que `error` pode não ser uma instância de `Error`.

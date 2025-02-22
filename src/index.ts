@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 import fs from 'fs';
 import { program } from 'commander';
-import { findDuplicates } from './scanner/find-duplicates.ts';
-import { log, logError, logWarning } from './utils/log.ts';
+import { findDuplicates } from './scanner/find-duplicates';
+import { log, logError, logWarning } from './utils/log';
 
 
 program

@@ -1,10 +1,10 @@
-import { getFilehash } from './get-files-hash.ts';
-import { log, logError } from '../utils/index.ts';
-import { getConfig } from '../config/get-config.ts';
-import { IConfig } from '../interfaces/index.ts';
-import { getFiles } from './get-files.ts';
-import { getFilePaterns } from './get-file-patterns.ts';
-import { getIgnorePatterns } from './get-ignore-patterns.ts';
+import { getFilehash } from './get-files-hash';
+import { log, logError } from '../utils/index';
+import { getConfig } from '../config/get-config';
+import { IConfig } from '../interfaces/index';
+import { getFiles } from './get-files';
+import { getFilePaterns } from './get-file-patterns';
+import { getIgnorePatterns } from './get-ignore-patterns';
 
 
 export const findDuplicates = async () => {

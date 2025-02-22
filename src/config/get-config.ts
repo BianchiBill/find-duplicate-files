@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { logError } from '../utils/log.ts';
+import { logError } from '../utils/log';
 
 export const getConfig = () => {
   try {

@@ -6,7 +6,7 @@ export const getFilePaterns = (
   const filePatterns: string[] = [];
 
   if (includeTypescript) {
-    filePatterns.push(`${directory}/**/*.ts`);
+    filePatterns.push(`${directory}/**/*`);
   }
 
   if (includeJavascript) {
