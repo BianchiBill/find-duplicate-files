@@ -1,5 +1,5 @@
 {
-  "name": "find-duplicate-files",
+  "name": "scanner-duplicate-files",
   "version": "0.0.1",
   "description": "This project aim to...",
   "author": "Rafael Bianchi <rafaelbianchi06@gmail.com>",
@@ -11,10 +11,11 @@
     "duplicate",
     "files",
     "duplicate files",
-    "duplicate-files",
+    "scanner-files",
     "find",
     "find duplicate",
-    "find duplicate files"
+    "find duplicate files",
+    "scanner duplicate files"
   ],
   "exports": "./dist/index.js",
   "types": "./dist/index.d.ts",
