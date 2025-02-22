@@ -1,7 +1,7 @@
 {
   "name": "scanner-duplicate-files",
-  "version": "0.0.3",
-  "description": "This project aim to...",
+  "version": "1.0.0",
+  "description": "See README.md",
   "author": "Rafael Bianchi <rafaelbianchi06@gmail.com>",
   "type": "module",
   "private": false,
