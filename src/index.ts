@@ -6,7 +6,7 @@ import { log, logError, logWarning } from './utils/log.ts';
 
 
 program
-  .version('0.0.2')
+  .version('0.0.3')
   .argument('<directory>', 'Diretório para escanear')
   .option('-d, --delete', 'Remover duplicatas automaticamente')
   .action(async (options) => {
