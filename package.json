@@ -24,6 +24,9 @@
   "files": [
     "dist"
   ],
+  "bin": {
+    "find-duplicates": "./dist/index.js"
+  },
   "scripts": {
     "dev": "tsx src/run.ts",
     "build": "tsc"
