@@ -2,13 +2,15 @@
 import fs from 'fs';
 import { program } from 'commander';
 import { findDuplicates } from './scanner/find-duplicates';
-import { log, logError, logWarning } from './utils/log';
+import { log, logError, logWarning } from './utils';
+import { writeCsv } from './utils';
 
 
 program
   .version('1.0.0')
   .argument('<directory>', 'Diretório para escanear')
   .option('-d, --delete', 'Remover duplicatas automaticamente')
+  .option('-csv, --csv', 'Cria um arquivo csv')
   .action(async (options) => {
     const duplicates = await findDuplicates();
 
@@ -28,6 +30,10 @@ program
         fs.unlinkSync(duplicate);
         log(`🗑️ Removido: ${duplicate}`);
       });
+    }
+
+    if (options.csv) {
+      await writeCsv(duplicates);
     }
   });
 
