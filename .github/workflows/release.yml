@@ -1,0 +1,51 @@
+name: Release and Publish
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  release:
+    name: Create Release and Publish to npm
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🔄 Checkout do código
+        uses: actions/checkout@v4
+
+      - name: 🔄 Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: 'https://registry.npmjs.org/'
+
+      - name: 📦 Instalar dependências
+        run: yarn
+
+      - name: 🔄 Compilar o TypeScript
+        run: yarn build
+
+      - name: 🚀 Gerar versão e release notes automaticamente
+        id: release
+        uses: cycjimmy/semantic-release-action@v4
+        with:
+          extra_plugins: |
+            @semantic-release/changelog
+            @semantic-release/git
+            @semantic-release/github
+            @semantic-release/npm
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: 📢 Publicar no npm
+        if: steps.release.outputs.new_release_published == 'true'
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
