@@ -25,17 +25,17 @@ export const findDuplicates = async () => {
   const hashes = new Map();
   const duplicates = [];
 
-  for (const file of files) {
+  for (let i =0; i < files.length; i += 1) {
 
     try {
-      const hash = await getFilehash(file);
+      const hash = await getFilehash(files[ i ]);
       if (hashes.has(hash)) {
-        duplicates.push({ original: hashes.get(hash), duplicate: file });
+        duplicates.push({ original: hashes.get(hash), duplicate: files[ i ] });
       } else {
-        hashes.set(hash, file);
+        hashes.set(hash, files[ i ]);
       }
     } catch (err: unknown) {
-      logError(`Erro ao processar ${file}:
+      logError(`Erro ao processar ${files[ i ]}:
         ${err instanceof Error ? err.message : 'Unknow error'}`);
     }
   }

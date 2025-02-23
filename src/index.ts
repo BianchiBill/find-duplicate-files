@@ -20,6 +20,7 @@ program
     logWarning('\n⚠️  Arquivos Duplicados Encontrados:');
     duplicates.forEach(({ original, duplicate }) => {
       logError(`❌ ${duplicate} (Duplicado de ${original})`);
+      log(`Total de arquivos duplicados: ${duplicates.length}`);
     });
 
     if (options.delete) {
