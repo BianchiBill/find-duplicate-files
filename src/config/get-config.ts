@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import { logError } from '../utils/log';
 
 export const getConfig = () => {
   try {
@@ -19,8 +18,14 @@ export const getConfig = () => {
 
   } catch (error) {
     if (error instanceof Error) {
-      logError('⚠️ Arquivo sdfconfig.json não encontrado na raiz do projeto.');
-      process.exit(1);
+      const sdfconfig = {
+        directory: './',
+        ignoreNodeModules: true,
+        includeTypescript: true,
+        includeJavascript: true,
+        ignoreFolders: [ '**/dist/**', '**/.git/**' ],
+      };
+      return sdfconfig;
     }
   }
 };
