@@ -1,5 +1,6 @@
 import { getFilehash } from './get-files-hash';
-import { log, logError } from '../utils/index';
+import { log, logError } from '../utils';
+import { progressBar } from '../utils';
 import { getConfig } from '../config/get-config';
 import { IConfig } from '../interfaces/index';
 import { getFiles } from './get-files';
@@ -38,6 +39,7 @@ export const findDuplicates = async () => {
       logError(`Erro ao processar ${files[ i ]}:
         ${err instanceof Error ? err.message : 'Unknow error'}`);
     }
+    progressBar(i +1, files.length);
   }
 
   return duplicates;
